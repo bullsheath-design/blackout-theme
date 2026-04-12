@@ -1,0 +1,60 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-grid",
+      "settings": {
+        "products_per_page": 12,
+        "columns": 3,
+        "show_atc": true,
+        "view_all_label": "View all"
+      }
+    },
+    "steps": {
+      "type": "numbered-steps",
+      "blocks": {
+        "s1": { "type": "step", "settings": { "tagline": "Filter", "heading": "Sort by category", "text": "Narrow by ingredient type, form, or dietary preference." } },
+        "s2": { "type": "step", "settings": { "tagline": "Compare", "heading": "Read the label", "text": "Every product shows full ingredient breakdown and clinical doses." } },
+        "s3": { "type": "step", "settings": { "tagline": "Choose", "heading": "Pick your formula", "text": "Select the right product for your training goals." } },
+        "s4": { "type": "step", "settings": { "tagline": "Subscribe", "heading": "Save with auto-ship", "text": "Lock in your best price with a subscription." } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {}
+    },
+    "trust": {
+      "type": "trust-cards",
+      "blocks": {
+        "c1": { "type": "card", "settings": { "tagline": "Transparent", "heading": "Full label disclosure", "text": "No hidden formulas." } },
+        "c2": { "type": "card", "settings": { "tagline": "Tested", "heading": "Third-party certified", "text": "Independent lab verification." } },
+        "c3": { "type": "card", "settings": { "tagline": "Guaranteed", "heading": "Money-back promise", "text": "60-day no-questions refund." } },
+        "c4": { "type": "card", "settings": { "tagline": "Clean", "heading": "No artificial fillers", "text": "Every ingredient serves a purpose." } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"],
+      "settings": {
+        "heading": "Why choose Blackout",
+        "columns": 4
+      }
+    },
+    "testimonials": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "r1": { "type": "testimonial" },
+        "r2": { "type": "testimonial" },
+        "r3": { "type": "testimonial" }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "heading": "Customer testimonials"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Not sure where to start?",
+        "description": "Take our quiz to find the right formula for your goals.",
+        "button_label": "Take the quiz",
+        "button_label_2": "Contact us"
+      }
+    }
+  },
+  "order": ["main", "steps", "trust", "testimonials", "cta"]
+}

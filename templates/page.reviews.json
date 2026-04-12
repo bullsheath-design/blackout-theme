@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "tagline": "Social proof",
+        "heading": "What athletes are saying",
+        "description": "Real reviews from real athletes who put our products to the test."
+      }
+    },
+    "testimonials_grid": {
+      "type": "testimonial-grid",
+      "blocks": {
+        "r1": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"I've tested everything. Blackout is the only brand that delivers exactly what the label says.\"", "name": "Marcus Chen", "title": "Competitive powerlifter" } },
+        "r2": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"Finally a supplement company that doesn't hide behind proprietary blends.\"", "name": "Sarah Thompson", "title": "CrossFit athlete" } },
+        "r3": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"The pre-workout hits different when you know every ingredient is clinically dosed.\"", "name": "James Rodriguez", "title": "Personal trainer" } }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "heading": "Customer testimonials",
+        "columns": 3
+      }
+    },
+    "carousel": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "r1": { "type": "testimonial" },
+        "r2": { "type": "testimonial" },
+        "r3": { "type": "testimonial" },
+        "r4": { "type": "testimonial" }
+      },
+      "block_order": ["r1", "r2", "r3", "r4"],
+      "settings": {
+        "heading": "More reviews"
+      }
+    },
+    "logos": {
+      "type": "logo-bar",
+      "blocks": {
+        "l1": { "type": "logo" },
+        "l2": { "type": "logo" },
+        "l3": { "type": "logo" },
+        "l4": { "type": "logo" }
+      },
+      "block_order": ["l1", "l2", "l3", "l4"],
+      "settings": { "heading": "Featured in" }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to see for yourself?",
+        "description": "Join thousands of athletes who trust Blackout.",
+        "button_label": "Shop now",
+        "button_label_2": "Take the quiz"
+      }
+    }
+  },
+  "order": ["hero", "testimonials_grid", "carousel", "logos", "cta"]
+}

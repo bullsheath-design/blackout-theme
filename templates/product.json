@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "show_vendor": true
+      }
+    },
+    "ingredients": {
+      "type": "ingredient-list",
+      "blocks": {
+        "i1": { "type": "ingredient", "settings": { "title": "Caffeine blend" } },
+        "i2": { "type": "ingredient", "settings": { "title": "Beta-alanine complex" } },
+        "i3": { "type": "ingredient", "settings": { "title": "Citrulline malate" } },
+        "i4": { "type": "ingredient", "settings": { "title": "Creatine monohydrate" } },
+        "i5": { "type": "ingredient", "settings": { "title": "Taurine formula" } },
+        "i6": { "type": "ingredient", "settings": { "title": "Nitrate matrix" } }
+      },
+      "block_order": ["i1", "i2", "i3", "i4", "i5", "i6"],
+      "settings": {
+        "heading": "Key ingredients",
+        "columns": 6
+      }
+    },
+    "logos": {
+      "type": "logo-bar",
+      "blocks": {
+        "l1": { "type": "logo" },
+        "l2": { "type": "logo" },
+        "l3": { "type": "logo" },
+        "l4": { "type": "logo" }
+      },
+      "block_order": ["l1", "l2", "l3", "l4"],
+      "settings": {
+        "heading": "Trusted by athletes"
+      }
+    },
+    "testimonials": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "r1": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"Game changer for my training. Clean energy, no crash.\"", "name": "Marcus Chen", "title": "Competitive powerlifter" } },
+        "r2": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"Finally a brand that shows exactly what's in the bottle.\"", "name": "Sarah Thompson", "title": "CrossFit athlete" } },
+        "r3": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"Noticeable difference from day one. This stuff actually works.\"", "name": "James Rodriguez", "title": "Personal trainer" } }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "heading": "What athletes say"
+      }
+    },
+    "faq": {
+      "type": "faq-accordion",
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "How should I take this product?" } },
+        "q2": { "type": "question", "settings": { "question": "Is this product third-party tested?" } },
+        "q3": { "type": "question", "settings": { "question": "Can I stack this with other products?" } },
+        "q4": { "type": "question", "settings": { "question": "What is your return policy?" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4"],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "cta_heading": "Still have questions?",
+        "cta_button_label": "Contact us"
+      }
+    },
+    "related": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "You may also like",
+        "products_to_show": 4,
+        "columns": 4,
+        "show_vendor": false,
+        "show_button": true
+      }
+    }
+  },
+  "order": ["main", "ingredients", "logos", "testimonials", "faq", "related"]
+}

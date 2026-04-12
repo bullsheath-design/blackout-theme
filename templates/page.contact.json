@@ -1,0 +1,64 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "tagline": "Support",
+        "heading": "Get in touch",
+        "description": "Have a question about our products, ingredients, or your order? We're here to help."
+      }
+    },
+    "cards": {
+      "type": "contact-cards",
+      "blocks": {
+        "c1": { "type": "card", "settings": { "icon": "email", "heading": "Email", "text": "We respond to all inquiries within 24 hours during business days.", "link_text": "hello@blackout.com" } },
+        "c2": { "type": "card", "settings": { "icon": "chat", "heading": "Live chat", "text": "Chat with our team Monday-Friday, 9 AM-6 PM EST.", "link_text": "Start new chat" } },
+        "c3": { "type": "card", "settings": { "icon": "phone", "heading": "Phone", "text": "Call us Monday-Friday, 9 AM-6 PM EST for order and product support.", "link_text": "+1 (844) 773-6527" } },
+        "c4": { "type": "card", "settings": { "icon": "location", "heading": "Office", "text": "Mail us if you prefer. We read everything that comes through.", "link_text": "Get directions" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"],
+      "settings": {}
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "o1": { "type": "option", "settings": { "value": "General inquiry" } },
+        "o2": { "type": "option", "settings": { "value": "Order support" } },
+        "o3": { "type": "option", "settings": { "value": "Product question" } },
+        "o4": { "type": "option", "settings": { "value": "Wholesale" } },
+        "o5": { "type": "option", "settings": { "value": "Other" } }
+      },
+      "block_order": ["o1", "o2", "o3", "o4", "o5"],
+      "settings": {
+        "tagline": "Contact",
+        "heading": "Send us a message",
+        "description": "Fill out the form below and we'll get back to you within 24 hours."
+      }
+    },
+    "faq": {
+      "type": "faq-accordion",
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "How long does shipping take?" } },
+        "q2": { "type": "question", "settings": { "question": "What is your return policy?" } },
+        "q3": { "type": "question", "settings": { "question": "Do you ship internationally?" } },
+        "q4": { "type": "question", "settings": { "question": "How do I track my order?" } },
+        "q5": { "type": "question", "settings": { "question": "Can I modify my subscription?" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "heading": "Frequently asked questions",
+        "cta_heading": "Still have questions?",
+        "cta_button_label": "Email us"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to get started?",
+        "description": "Explore our full range of clinically dosed supplements.",
+        "button_label": "Shop now"
+      }
+    }
+  },
+  "order": ["hero", "cards", "form", "faq", "cta"]
+}

@@ -14,7 +14,8 @@
     "button_label": "Button label",
     "button_label_2": "Second button label",
     "button_url": "Button link",
-    "button_url_2": "Second button link"
+    "button_url_2": "Second button link",
+    "alignment": "Text alignment"
   },
   "options": {
     "position": {
@@ -137,6 +138,71 @@
       "subscribe": "Subscribe",
       "disclaimer": "By subscribing you agree to our privacy policy and consent to receive updates.",
       "rights": "All rights reserved."
+    },
+    "page_hero": {
+      "name": "Page hero"
+    },
+    "contact_cards": {
+      "name": "Contact cards",
+      "card": "Contact card",
+      "icon": "Icon type",
+      "link_text": "Link text"
+    },
+    "contact_form": {
+      "name": "Contact form",
+      "subject_option": "Subject option",
+      "option_value": "Option text",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "consent": "I agree to the terms and privacy policy.",
+      "submit": "Submit",
+      "success": "Thanks for your message! We'll get back to you within 24 hours."
+    },
+    "stats_grid": {
+      "name": "Stats grid",
+      "stat": "Stat",
+      "columns": "Columns on desktop",
+      "label": "Label",
+      "value": "Value"
+    },
+    "faq": {
+      "name": "FAQ",
+      "question": "Question",
+      "answer": "Answer",
+      "cta_header": "Call to action",
+      "cta_heading": "CTA heading"
+    },
+    "collection_grid": {
+      "name": "Collection grid",
+      "collection": "Collection",
+      "products_per_page": "Products per page",
+      "columns": "Columns on desktop",
+      "show_atc": "Show add to cart button",
+      "view_all": "View all label",
+      "add_to_cart": "Add to cart",
+      "product_title": "Product title",
+      "variant": "Variant"
+    },
+    "ingredient_list": {
+      "name": "Ingredient list",
+      "ingredient": "Ingredient",
+      "columns": "Columns on desktop"
+    },
+    "main_product": {
+      "name": "Product page",
+      "show_vendor": "Show vendor",
+      "quantity": "Quantity",
+      "add_to_cart": "Add to cart",
+      "sold_out": "Sold out",
+      "home": "Home"
+    },
+    "numbered_steps": {
+      "name": "Numbered steps",
+      "step": "Step"
     }
   },
   "settings_schema": {

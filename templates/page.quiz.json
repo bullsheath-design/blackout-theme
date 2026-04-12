@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "tagline": "Personalized",
+        "heading": "Find your formula",
+        "description": "Answer a few questions and we'll recommend the right products for your training goals."
+      }
+    },
+    "steps": {
+      "type": "numbered-steps",
+      "blocks": {
+        "s1": { "type": "step", "settings": { "tagline": "Step 1", "heading": "Tell us your goals", "text": "Are you training for strength, endurance, recovery, or general wellness?" } },
+        "s2": { "type": "step", "settings": { "tagline": "Step 2", "heading": "Your training level", "text": "Beginner, intermediate, or advanced — we'll match your intensity." } }
+      },
+      "block_order": ["s1", "s2"],
+      "settings": {
+        "heading": "How it works"
+      }
+    },
+    "split": {
+      "type": "split-feature",
+      "settings": {
+        "content_tagline": "Science-backed",
+        "content_heading": "Recommendations based on research",
+        "content_text": "Our quiz algorithm matches your goals with clinically researched ingredients at their effective doses.",
+        "button_label": "Start the quiz",
+        "image_position": "2"
+      }
+    },
+    "testimonials": {
+      "type": "testimonial-grid",
+      "blocks": {
+        "r1": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"The quiz nailed it. Every product recommendation was exactly what I needed.\"", "name": "Alex Kim", "title": "Marathon runner" } },
+        "r2": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"Saved me hours of research. The personalized stack is working great.\"", "name": "Michelle Torres", "title": "Fitness competitor" } },
+        "r3": { "type": "testimonial", "settings": { "rating": 5, "quote": "\"I was skeptical but the recommendations were spot on for my goals.\"", "name": "David Park", "title": "Strength coach" } }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "heading": "Quiz results that deliver",
+        "columns": 3
+      }
+    },
+    "faq": {
+      "type": "faq-accordion",
+      "blocks": {
+        "q1": { "type": "question", "settings": { "question": "How long does the quiz take?" } },
+        "q2": { "type": "question", "settings": { "question": "Is the quiz free?" } },
+        "q3": { "type": "question", "settings": { "question": "Can I retake the quiz?" } }
+      },
+      "block_order": ["q1", "q2", "q3"],
+      "settings": {
+        "heading": "Questions about the quiz"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to find your formula?",
+        "description": "Take the 2-minute quiz and get a personalized supplement plan.",
+        "button_label": "Start the quiz"
+      }
+    }
+  },
+  "order": ["hero", "steps", "split", "testimonials", "faq", "cta"]
+}

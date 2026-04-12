@@ -1,0 +1,141 @@
+<section class="contact-cards section-padding" {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="contact-cards__grid" style="--columns: {{ section.blocks.size | at_most: 4 }};">
+      {%- for block in section.blocks -%}
+        <div class="contact-cards__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.icon == 'email' -%}
+            <svg class="contact-cards__icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 001.228 0L20 9.044 20.002 18H4z"/></svg>
+          {%- elsif block.settings.icon == 'chat' -%}
+            <svg class="contact-cards__icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h3v3.767L13.277 18H20c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm0 14h-7.277L9 18.233V16H4V4h16v12z"/><path d="M7 7h10v2H7zm0 4h7v2H7z"/></svg>
+          {%- elsif block.settings.icon == 'phone' -%}
+            <svg class="contact-cards__icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.707 12.293a.999.999 0 00-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 000-1.414l-4-4a.999.999 0 00-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 000-1.414l-4-4.001z"/></svg>
+          {%- elsif block.settings.icon == 'location' -%}
+            <svg class="contact-cards__icon" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"/><path d="M11.42 21.814a.998.998 0 001.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"/></svg>
+          {%- endif -%}
+          {%- if block.settings.heading != blank -%}
+            <h3 class="contact-cards__heading">{{ block.settings.heading }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <p class="contact-cards__text">{{ block.settings.text }}</p>
+          {%- endif -%}
+          {%- if block.settings.link_text != blank -%}
+            <a href="{{ block.settings.link_url }}" class="contact-cards__link">{{ block.settings.link_text }}</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .contact-cards__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem 2.5rem;
+  }
+
+  .contact-cards__icon {
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-cards__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .contact-cards__text {
+    margin: 0 0 1.25rem;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .contact-cards__link {
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  .contact-cards__link:hover {
+    opacity: 0.7;
+  }
+
+  @media (min-width: 640px) {
+    .contact-cards__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contact-cards__grid {
+      grid-template-columns: repeat(var(--columns, 4), 1fr);
+    }
+
+    .contact-cards__heading {
+      font-size: 2rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.contact_cards.name",
+  "class": "section-contact-cards",
+  "max_blocks": 4,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "t:sections.contact_cards.card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "t:sections.contact_cards.icon",
+          "options": [
+            { "value": "email", "label": "Email" },
+            { "value": "chat", "label": "Chat" },
+            { "value": "phone", "label": "Phone" },
+            { "value": "location", "label": "Location" }
+          ],
+          "default": "email"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:labels.heading",
+          "default": "Email"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "t:labels.text",
+          "default": "We respond to all inquiries within 24 hours during business days."
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "t:sections.contact_cards.link_text",
+          "default": "hello@blackout.com"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "t:labels.button_url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact_cards.name",
+      "blocks": [
+        { "type": "card", "settings": { "icon": "email", "heading": "Email", "text": "We respond to all inquiries within 24 hours.", "link_text": "hello@blackout.com" } },
+        { "type": "card", "settings": { "icon": "chat", "heading": "Live chat", "text": "Chat with our team Monday-Friday, 9 AM-6 PM EST.", "link_text": "Start new chat" } },
+        { "type": "card", "settings": { "icon": "phone", "heading": "Phone", "text": "Call us Monday-Friday, 9 AM-6 PM EST.", "link_text": "+1 (844) 773-6527" } },
+        { "type": "card", "settings": { "icon": "location", "heading": "Office", "text": "Mail us if you prefer. We read everything.", "link_text": "Get directions" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

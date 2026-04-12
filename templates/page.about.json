@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "tagline": "Our story",
+        "heading": "Built by athletes, for athletes",
+        "description": "We started Blackout because we were tired of underdosed, overhyped supplements hiding behind proprietary blends.",
+        "button_label": "Shop now",
+        "button_label_2": "Our process"
+      }
+    },
+    "mission": {
+      "type": "split-feature",
+      "settings": {
+        "content_tagline": "Mission",
+        "content_heading": "Transparency is our foundation",
+        "content_text": "Every ingredient is listed at its full dose. Every batch is third-party tested. Every label tells the complete truth. We believe athletes deserve to know exactly what they're putting in their bodies.",
+        "button_label": "View our products",
+        "image_position": "2"
+      }
+    },
+    "values": {
+      "type": "trust-cards",
+      "blocks": {
+        "v1": { "type": "card", "settings": { "tagline": "Transparent", "heading": "Full label disclosure", "text": "No hidden formulas. Complete ingredient breakdown on every product." } },
+        "v2": { "type": "card", "settings": { "tagline": "Tested", "heading": "Third-party certified", "text": "Independent labs verify potency and purity before you receive it." } },
+        "v3": { "type": "card", "settings": { "tagline": "Guaranteed", "heading": "Money-back promise", "text": "Sixty days to try it. If it doesn't work, we refund it." } }
+      },
+      "block_order": ["v1", "v2", "v3"],
+      "settings": {
+        "heading": "What we stand for",
+        "columns": 3
+      }
+    },
+    "stats": {
+      "type": "stats-grid",
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "label": "Customer reviews", "value": "50,000+", "text": "Five-star ratings from athletes who tested our formulas" } },
+        "s2": { "type": "image" },
+        "s3": { "type": "stat", "settings": { "label": "Products shipped", "value": "1M+", "text": "Units delivered worldwide" } },
+        "s4": { "type": "stat", "settings": { "label": "Lab tests passed", "value": "100%", "text": "Every batch third-party verified" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {
+        "heading": "Our impact in numbers",
+        "columns": 3
+      }
+    },
+    "logos": {
+      "type": "logo-bar",
+      "blocks": {
+        "l1": { "type": "logo" },
+        "l2": { "type": "logo" },
+        "l3": { "type": "logo" },
+        "l4": { "type": "logo" },
+        "l5": { "type": "logo" },
+        "l6": { "type": "logo" }
+      },
+      "block_order": ["l1", "l2", "l3", "l4", "l5", "l6"],
+      "settings": { "heading": "Featured in" }
+    },
+    "testimonials": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "r1": { "type": "testimonial" },
+        "r2": { "type": "testimonial" },
+        "r3": { "type": "testimonial" },
+        "r4": { "type": "testimonial" }
+      },
+      "block_order": ["r1", "r2", "r3", "r4"],
+      "settings": { "heading": "What athletes say" }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to try Blackout?",
+        "description": "Clean ingredients. Clinical doses. Transparent labels.",
+        "button_label": "Shop now",
+        "button_label_2": "Take the quiz"
+      }
+    }
+  },
+  "order": ["hero", "mission", "values", "stats", "logos", "testimonials", "cta"]
+}
