@@ -1,0 +1,165 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content"
+    }
+  },
+  "labels": {
+    "heading": "Heading",
+    "tagline": "Tagline",
+    "description": "Description",
+    "text": "Text",
+    "image": "Image",
+    "alt_text": "Alt text",
+    "button_label": "Button label",
+    "button_label_2": "Second button label",
+    "button_url": "Button link",
+    "button_url_2": "Second button link"
+  },
+  "options": {
+    "position": {
+      "left": "Left",
+      "right": "Right"
+    },
+    "alignment": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right"
+    },
+    "direction": {
+      "horizontal": "Horizontal",
+      "vertical": "Vertical"
+    },
+    "text_style": {
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "normal": "Normal"
+    }
+  },
+  "sections": {
+    "header_group": {
+      "name": "Header"
+    },
+    "footer_group": {
+      "name": "Footer"
+    },
+    "header": {
+      "name": "Header",
+      "logo": "Logo image",
+      "menu": "Navigation menu",
+      "background_color": "Background color",
+      "text_color": "Text color",
+      "navigation": "Main navigation",
+      "search": "Search",
+      "account": "Account",
+      "cart": "Cart",
+      "menu_toggle": "Menu"
+    },
+    "hero_slideshow": {
+      "name": "Hero slideshow",
+      "height": "Slide height",
+      "slide": "Slide",
+      "tab_label": "Tab label",
+      "label": "Hero slideshow",
+      "slide_of": "Slide {{ current }} of {{ total }}"
+    },
+    "logo_bar": {
+      "name": "Logo bar",
+      "logo": "Logo",
+      "logo_height": "Logo height",
+      "label": "Featured brands"
+    },
+    "featured_collection": {
+      "name": "Featured collection",
+      "collection": "Collection",
+      "products_to_show": "Products to show",
+      "columns": "Columns on desktop",
+      "show_vendor": "Show vendor",
+      "show_button": "Show view button",
+      "view_all": "View all label",
+      "view": "View",
+      "vendor": "Vendor",
+      "product_title": "Product title"
+    },
+    "split_feature": {
+      "name": "Split feature",
+      "section_header": "Section header",
+      "content_header": "Content",
+      "media_header": "Media",
+      "image_position": "Image position"
+    },
+    "trust_cards": {
+      "name": "Trust cards",
+      "card": "Card",
+      "columns": "Columns on desktop"
+    },
+    "testimonial_carousel": {
+      "name": "Testimonial carousel",
+      "testimonial": "Testimonial",
+      "rating": "Star rating",
+      "quote": "Quote",
+      "avatar": "Avatar",
+      "author_name": "Author name",
+      "author_title": "Author title",
+      "label": "Customer testimonials",
+      "previous": "Previous slide",
+      "next": "Next slide",
+      "go_to_slide": "Go to slide {{ number }}",
+      "out_of_5": "out of 5 stars"
+    },
+    "testimonial_grid": {
+      "name": "Testimonial grid",
+      "testimonial": "Testimonial",
+      "rating": "Star rating",
+      "quote": "Quote",
+      "avatar": "Avatar",
+      "author_name": "Author name",
+      "author_title": "Author title",
+      "company_logo": "Company logo",
+      "columns": "Columns on desktop",
+      "out_of_5": "out of 5 stars"
+    },
+    "cta_banner": {
+      "name": "Call to action banner"
+    },
+    "stacked_features": {
+      "name": "Stacked features",
+      "feature": "Feature panel",
+      "trigger_title": "Panel title"
+    },
+    "footer": {
+      "name": "Footer",
+      "newsletter_heading": "Newsletter heading",
+      "newsletter_text": "Newsletter description",
+      "link_column": "Link column",
+      "menu": "Menu",
+      "email_placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "disclaimer": "By subscribing you agree to our privacy policy and consent to receive updates.",
+      "rights": "All rights reserved."
+    }
+  },
+  "settings_schema": {
+    "colors": {
+      "name": "Colors",
+      "background": "Background",
+      "foreground": "Foreground",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "accent": "Accent",
+      "border": "Border"
+    },
+    "typography": {
+      "name": "Typography",
+      "heading_font": "Heading font",
+      "body_font": "Body font"
+    },
+    "social": {
+      "name": "Social media"
+    },
+    "favicon": {
+      "name": "Favicon",
+      "image": "Favicon image"
+    }
+  }
+}

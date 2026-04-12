@@ -1,0 +1,170 @@
+<section
+  class="logo-bar section-padding"
+  style="--logo-height: {{ section.settings.logo_height }}px;"
+  {{ section.shopify_attributes }}
+>
+  {%- if section.settings.heading != blank -%}
+    <div class="logo-bar__header">
+      <h2 class="logo-bar__heading">{{ section.settings.heading }}</h2>
+    </div>
+  {%- endif -%}
+
+  <div class="logo-bar__track" aria-label="{{ 'sections.logo_bar.label' | t }}">
+    <div class="logo-bar__scroll">
+      {%- for block in section.blocks -%}
+        <div class="logo-bar__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: height: section.settings.logo_height | image_tag: alt: block.settings.alt_text, loading: 'lazy', class: 'logo-bar__logo' }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'logo-bar__logo logo-bar__placeholder' }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="logo-bar__scroll" aria-hidden="true">
+      {%- for block in section.blocks -%}
+        <div class="logo-bar__item">
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: height: section.settings.logo_height | image_tag: alt: block.settings.alt_text, loading: 'lazy', class: 'logo-bar__logo' }}
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'logo-bar__logo logo-bar__placeholder' }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .logo-bar {
+    overflow: hidden;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .logo-bar__header {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  .logo-bar__heading {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .logo-bar__track {
+    display: flex;
+    align-items: center;
+    padding-top: 1.75rem;
+  }
+
+  .logo-bar__scroll {
+    display: flex;
+    shrink: 0;
+    align-items: center;
+    animation: logo-scroll 30s linear infinite;
+  }
+
+  .logo-bar__item {
+    flex-shrink: 0;
+    margin: 0 1.75rem;
+  }
+
+  .logo-bar__logo {
+    max-height: var(--logo-height, 48px);
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+
+  .logo-bar__logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .logo-bar__placeholder {
+    height: var(--logo-height, 48px);
+    width: 120px;
+  }
+
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  @media (min-width: 768px) {
+    .logo-bar {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .logo-bar__item {
+      margin: 0 2.5rem;
+    }
+
+    .logo-bar__heading {
+      font-size: 1.125rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.logo_bar.name",
+  "class": "section-logo-bar",
+  "max_blocks": 12,
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:labels.heading",
+      "default": "Featured in"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "label": "t:sections.logo_bar.logo_height",
+      "min": 24,
+      "max": 80,
+      "step": 4,
+      "default": 48,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "t:sections.logo_bar.logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:labels.image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "t:labels.alt_text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.logo_bar.name",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

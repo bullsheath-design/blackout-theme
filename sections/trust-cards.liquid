@@ -1,0 +1,249 @@
+<section class="trust-cards section-padding" {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="trust-cards__header">
+      {%- if section.settings.tagline != blank -%}
+        <p class="trust-cards__tagline">{{ section.settings.tagline }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="trust-cards__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <p class="trust-cards__description">{{ section.settings.description }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="trust-cards__grid" style="--columns: {{ section.settings.columns }};">
+      {%- for block in section.blocks -%}
+        <div class="trust-card" {{ block.shopify_attributes }}>
+          <div class="trust-card__content">
+            {%- if block.settings.tagline != blank -%}
+              <p class="trust-card__tagline">{{ block.settings.tagline }}</p>
+            {%- endif -%}
+            {%- if block.settings.heading != blank -%}
+              <h3 class="trust-card__heading">{{ block.settings.heading }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="trust-card__text">{{ block.settings.text }}</p>
+            {%- endif -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="trust-card__action">
+                <a href="{{ block.settings.button_url }}" class="btn--link">
+                  {{ block.settings.button_label }}
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.158 3.135a.5.5 0 01.707.023l3.75 4a.5.5 0 010 .684l-3.75 4a.5.5 0 11-.73-.684L9.565 7.5 6.135 3.842a.5.5 0 01.023-.707z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
+          {%- if block.settings.image != blank -%}
+            <div class="trust-card__media">
+              {{ block.settings.image | image_url: width: 600 | image_tag: alt: block.settings.heading, loading: 'lazy', class: 'trust-card__image' }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .trust-cards__header {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .trust-cards__tagline {
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .trust-cards__heading {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+
+  .trust-cards__description {
+    font-size: 1.0625rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .trust-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  .trust-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+  }
+
+  .trust-card__content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .trust-card__tagline {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .trust-card__heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .trust-card__text {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .trust-card__action {
+    margin-top: 1.25rem;
+  }
+
+  .trust-card__action .btn--link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+
+  .trust-card__media {
+    overflow: hidden;
+  }
+
+  .trust-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (min-width: 640px) {
+    .trust-cards__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .trust-cards__grid {
+      gap: 2rem;
+    }
+
+    .trust-card__heading {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .trust-cards__grid {
+      grid-template-columns: repeat(var(--columns, 4), 1fr);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.trust_cards.name",
+  "class": "section-trust-cards",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "t:labels.tagline"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:labels.heading",
+      "default": "Why choose Blackout"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:labels.description"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.trust_cards.columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "t:sections.trust_cards.card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "t:labels.tagline",
+          "default": "Transparent"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:labels.heading",
+          "default": "Full label disclosure"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "t:labels.text",
+          "default": "No hidden formulas. Complete ingredient breakdown on every product."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:labels.button_label",
+          "default": "View"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "t:labels.button_url"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:labels.image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.trust_cards.name",
+      "blocks": [
+        { "type": "card", "settings": { "tagline": "Transparent", "heading": "Full label disclosure", "text": "No hidden formulas. Complete ingredient breakdown on every product." } },
+        { "type": "card", "settings": { "tagline": "Tested", "heading": "Third-party certified", "text": "Independent labs verify potency and purity before you receive it." } },
+        { "type": "card", "settings": { "tagline": "Guaranteed", "heading": "Money-back promise", "text": "Sixty days to try it. If it doesn't work, we refund it." } },
+        { "type": "card", "settings": { "tagline": "Clean", "heading": "No artificial fillers", "text": "Every ingredient serves a purpose. Nothing unnecessary." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

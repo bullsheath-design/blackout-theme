@@ -1,0 +1,306 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-slideshow",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "heading": "Fuel your performance",
+            "subheading": "Clean ingredients. Clinical doses. Transparent labels. Supplements built for athletes who demand results.",
+            "tab_label": "Performance",
+            "button_label": "Shop now",
+            "button_label_2": "Take the quiz"
+          }
+        },
+        "slide_2": {
+          "type": "slide",
+          "settings": {
+            "heading": "No proprietary blends",
+            "subheading": "Every ingredient listed at its full dose. You know exactly what you're putting in your body.",
+            "tab_label": "Transparent",
+            "button_label": "View ingredients",
+            "button_label_2": "Learn more"
+          }
+        },
+        "slide_3": {
+          "type": "slide",
+          "settings": {
+            "heading": "Third-party tested",
+            "subheading": "Independent labs verify every batch for potency and purity before it ships to you.",
+            "tab_label": "Tested",
+            "button_label": "See results",
+            "button_label_2": "Our process"
+          }
+        },
+        "slide_4": {
+          "type": "slide",
+          "settings": {
+            "heading": "60-day guarantee",
+            "subheading": "Try it risk-free. If it doesn't deliver, get your money back. No questions asked.",
+            "tab_label": "Guarantee",
+            "button_label": "Shop now",
+            "button_label_2": "Learn more"
+          }
+        }
+      },
+      "block_order": ["slide_1", "slide_2", "slide_3", "slide_4"],
+      "settings": {
+        "height": 100
+      }
+    },
+    "logos": {
+      "type": "logo-bar",
+      "blocks": {
+        "logo_1": { "type": "logo", "settings": {} },
+        "logo_2": { "type": "logo", "settings": {} },
+        "logo_3": { "type": "logo", "settings": {} },
+        "logo_4": { "type": "logo", "settings": {} },
+        "logo_5": { "type": "logo", "settings": {} },
+        "logo_6": { "type": "logo", "settings": {} }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "heading": "Featured in"
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "tagline": "Products",
+        "heading": "Shop our best sellers",
+        "description": "Formulated for athletes who demand transparency and results.",
+        "products_to_show": 4,
+        "columns": 4,
+        "show_vendor": true,
+        "show_button": true,
+        "view_all_label": "View all"
+      }
+    },
+    "split": {
+      "type": "split-feature",
+      "settings": {
+        "tagline": "Our mission",
+        "heading": "Built different",
+        "content_tagline": "Performance",
+        "content_heading": "Supplements that actually work",
+        "content_text": "We started Blackout because we were tired of underdosed, overhyped supplements. Every product is formulated with clinically researched doses and zero filler.",
+        "button_label": "Our story",
+        "button_label_2": "Learn more",
+        "image_position": "2"
+      }
+    },
+    "trust": {
+      "type": "trust-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "tagline": "Transparent",
+            "heading": "Full label disclosure",
+            "text": "No hidden formulas. Complete ingredient breakdown on every product.",
+            "button_label": "View"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "tagline": "Tested",
+            "heading": "Third-party certified",
+            "text": "Independent labs verify potency and purity before you receive it.",
+            "button_label": "View"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "tagline": "Guaranteed",
+            "heading": "Money-back promise",
+            "text": "Sixty days to try it. If it doesn't work, we refund it.",
+            "button_label": "View"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "tagline": "Clean",
+            "heading": "No artificial fillers",
+            "text": "Every ingredient serves a purpose. Nothing unnecessary.",
+            "button_label": "View"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2", "card_3", "card_4"],
+      "settings": {
+        "heading": "Why choose Blackout",
+        "columns": 4
+      }
+    },
+    "testimonials_carousel": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "review_1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"I've tested everything. Blackout is the only brand that delivers exactly what the label says.\"",
+            "name": "Marcus Chen",
+            "title": "Competitive powerlifter"
+          }
+        },
+        "review_2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"Finally a supplement company that doesn't hide behind proprietary blends. Real doses, real results.\"",
+            "name": "Sarah Thompson",
+            "title": "CrossFit athlete"
+          }
+        },
+        "review_3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"The pre-workout hits different when you know every ingredient is clinically dosed. Night and day difference.\"",
+            "name": "James Rodriguez",
+            "title": "Personal trainer"
+          }
+        },
+        "review_4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"Third-party tested and it shows. Clean energy, no crash, no jitters. This is what supplements should be.\"",
+            "name": "Alex Kim",
+            "title": "Marathon runner"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3", "review_4"],
+      "settings": {
+        "heading": "Customer testimonials",
+        "description": "See what athletes are saying about Blackout supplements."
+      }
+    },
+    "testimonials_grid": {
+      "type": "testimonial-grid",
+      "blocks": {
+        "review_1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"The transparency alone sets them apart. I can see exactly what I'm taking and match it against the research myself.\"",
+            "name": "David Park",
+            "title": "Strength coach"
+          }
+        },
+        "review_2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"Switched from my old brand and the difference was immediate. Blackout doesn't cut corners.\"",
+            "name": "Michelle Torres",
+            "title": "Fitness competitor"
+          }
+        },
+        "review_3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"I recommend Blackout to every client. Clean, effective, and you know exactly what you're getting.\"",
+            "name": "Ryan Mitchell",
+            "title": "Sports nutritionist"
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3"],
+      "settings": {
+        "heading": "Customer testimonials",
+        "columns": 3
+      }
+    },
+    "cta_split": {
+      "type": "split-feature",
+      "settings": {
+        "tagline": "Community",
+        "content_heading": "Join the Blackout community",
+        "content_text": "Connect with athletes, get exclusive content, and be the first to know about new product drops.",
+        "button_label": "Join now",
+        "button_label_2": "Learn more",
+        "image_position": "1"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to elevate your performance?",
+        "description": "Clean ingredients. Clinical doses. Transparent labels. Start your transformation today.",
+        "button_label": "Shop now",
+        "button_label_2": "Take the quiz"
+      }
+    },
+    "features": {
+      "type": "stacked-features",
+      "blocks": {
+        "feature_1": {
+          "type": "feature",
+          "settings": {
+            "trigger_title": "Clean formula",
+            "tagline": "Ingredients",
+            "heading": "No proprietary blends or filler",
+            "text": "Every ingredient is listed at its full dose. No hiding behind \"proprietary blend\" language. You know exactly what you're taking and why.",
+            "button_label": "View ingredients",
+            "button_label_2": "Learn more"
+          }
+        },
+        "feature_2": {
+          "type": "feature",
+          "settings": {
+            "trigger_title": "Clinically dosed",
+            "tagline": "Science",
+            "heading": "Doses that match the research",
+            "text": "Every ingredient at its researched effective dose. No pixie-dusting. No underdosing. Just what the science says works.",
+            "button_label": "View research",
+            "button_label_2": "Learn more"
+          }
+        },
+        "feature_3": {
+          "type": "feature",
+          "settings": {
+            "trigger_title": "Third-party tested",
+            "tagline": "Quality",
+            "heading": "Independent lab verification",
+            "text": "Every batch is sent to an independent lab for potency and purity testing. We publish the results so you never have to guess.",
+            "button_label": "View certificates",
+            "button_label_2": "Learn more"
+          }
+        },
+        "feature_4": {
+          "type": "feature",
+          "settings": {
+            "trigger_title": "Money-back guarantee",
+            "tagline": "Trust",
+            "heading": "60-day no-questions refund",
+            "text": "We stand behind every product. Try it for 60 days. If you don't see results, we'll give you a full refund. No questions asked.",
+            "button_label": "Our guarantee",
+            "button_label_2": "Learn more"
+          }
+        }
+      },
+      "block_order": ["feature_1", "feature_2", "feature_3", "feature_4"],
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "logos",
+    "products",
+    "split",
+    "trust",
+    "testimonials_carousel",
+    "testimonials_grid",
+    "cta_split",
+    "cta",
+    "features"
+  ]
+}

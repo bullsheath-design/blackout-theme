@@ -1,0 +1,135 @@
+<section class="cta-banner section-padding" {{ section.shopify_attributes }}>
+  <div class="container cta-banner__inner">
+    <div class="cta-banner__content">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cta-banner__heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.description != blank -%}
+        <p class="cta-banner__description">{{ section.settings.description }}</p>
+      {%- endif -%}
+      <div class="cta-banner__buttons">
+        {%- if section.settings.button_label != blank -%}
+          <a href="{{ section.settings.button_url }}" class="btn btn--primary">
+            {{ section.settings.button_label }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_label_2 != blank -%}
+          <a href="{{ section.settings.button_url_2 }}" class="btn btn--secondary">
+            {{ section.settings.button_label_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+    {%- if section.settings.image != blank -%}
+      <div class="cta-banner__media">
+        {{ section.settings.image | image_url: width: 1600 | image_tag: alt: section.settings.heading, loading: 'lazy', class: 'cta-banner__image' }}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .cta-banner__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-banner__content {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cta-banner__heading {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    line-height: 1.1;
+  }
+
+  .cta-banner__description {
+    font-size: 1.0625rem;
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+
+  .cta-banner__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .cta-banner__media {
+    width: 100%;
+  }
+
+  .cta-banner__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    .cta-banner__buttons {
+      margin-top: 2rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.cta_banner.name",
+  "class": "section-cta-banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:labels.heading",
+      "default": "Ready to elevate your performance?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "t:labels.description",
+      "default": "Clean ingredients. Clinical doses. Transparent labels. Start your transformation today."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:labels.button_label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "t:labels.button_url"
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "t:labels.button_label_2",
+      "default": "Take the quiz"
+    },
+    {
+      "type": "url",
+      "id": "button_url_2",
+      "label": "t:labels.button_url_2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:labels.image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.cta_banner.name"
+    }
+  ]
+}
+{% endschema %}

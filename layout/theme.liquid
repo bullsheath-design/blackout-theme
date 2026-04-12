@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <style>
+      :root {
+        --color-background: {{ settings.color_background }};
+        --color-foreground: {{ settings.color_foreground }};
+        --color-primary: {{ settings.color_primary }};
+        --color-secondary: {{ settings.color_secondary }};
+        --color-accent: {{ settings.color_accent }};
+        --color-border: {{ settings.color_border }};
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-body-weight: {{ settings.type_body_font.weight }};
+        --font-heading-weight: {{ settings.type_header_font.weight }};
+        --content-grid: minmax(5%, 1fr) minmax(0, 1200px) minmax(5%, 1fr);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body-family);
+        font-weight: var(--font-body-weight);
+        color: var(--color-foreground);
+        background-color: var(--color-background);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading-family);
+        font-weight: var(--font-heading-weight);
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        cursor: pointer;
+        font-family: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-padding {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-padding {
+          padding-top: 6rem;
+          padding-bottom: 6rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .section-padding {
+          padding-top: 7rem;
+          padding-bottom: 7rem;
+        }
+      }
+
+      .btn {
+        display: inline-flex;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--color-border);
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .btn:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+
+      .btn--primary {
+        background-color: var(--color-foreground);
+        color: var(--color-background);
+        border-color: var(--color-foreground);
+      }
+
+      .btn--primary:hover {
+        opacity: 0.85;
+      }
+
+      .btn--secondary {
+        background-color: transparent;
+        color: var(--color-foreground);
+        border-color: var(--color-border);
+      }
+
+      .btn--secondary:hover {
+        background-color: var(--color-foreground);
+        color: var(--color-background);
+      }
+
+      .btn--link {
+        border: none;
+        padding: 0;
+        gap: 0.5rem;
+        font-weight: 600;
+      }
+
+      .btn--link:hover {
+        gap: 0.75rem;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+    </style>
+  </head>
+
+  <body>
+    <a class="visually-hidden" href="#main-content">
+      {{ 'general.accessibility.skip_to_content' | t }}
+    </a>
+
+    {% sections 'header-group' %}
+
+    <main id="main-content" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% sections 'footer-group' %}
+  </body>
+</html>
