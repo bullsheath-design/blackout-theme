@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    {% if settings.show_canonical_url_collection and template.name == "collection" %}
+      <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
+    {% else %}
+      <link rel="canonical" href="{{ canonical_url }}">
+    {% endif %}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -26,6 +30,173 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
+    {%- if template.name == 'index' -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "{{ shop.url }}/#organization",
+              "name": "Bull Sheath Leather",
+              "url": "{{ shop.url }}",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://bullsheathleather.com/cdn/shop/files/Bull_Sheath_Leather_Logo.png?v=1770328797&width=793"
+              },
+              "image": "https://bullsheathleather.com/cdn/shop/files/Bull_Sheath_Leather_Logo.png?v=1770328797&width=793",
+              "description": "Family-owned Texas leather goods company specializing in handcrafted full-grain leather wallets, badge wallets, knife sheaths, belts, and accessories.",
+              "telephone": "(817) 239-2540",
+              "email": "contact@bullsheathleather.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1301 East Debbie Lane, Ste. 102 #1418",
+                "addressLocality": "Mansfield",
+                "addressRegion": "TX",
+                "postalCode": "76063",
+                "addressCountry": "US"
+              },
+              "sameAs": [
+                "https://www.wikidata.org/wiki/Q139235402",
+                "https://www.facebook.com/bullsheathleather/",
+                "https://www.instagram.com/bullsheathleather/",
+                "https://www.youtube.com/channel/UCDsWXii6bALqW_CaKbFssYg"
+              ],
+              "foundingDate": "2020"
+            },
+            {
+              "@type": "WebSite",
+              "@id": "{{ shop.url }}/#website",
+              "name": "{{ shop.name }}",
+              "url": "{{ shop.url }}",
+              "publisher": {
+                "@id": "{{ shop.url }}/#organization"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "{{ shop.url }}/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            }
+          ]
+        }
+      </script>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Bull Sheath Leather",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Texas"
+          },
+          "url": "https://bullsheathleather.com",
+          "additionalType": "LeatherGoodsStore"
+        }
+      </script>
+    {%- endif -%}
+
+    {%- if template.name == 'collection' or template.name == 'product' or template.name == 'article' -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "{{ shop.url }}"
+            }
+            {%- if template.name == 'collection' and collection.handle -%}
+              ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{{ collection.title | escape }}",
+                "item": "{{ shop.url }}{{ collection.url }}"
+              }
+            {%- elsif template.name == 'product' -%}
+              {%- if collection -%}
+                ,{
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "{{ collection.title | escape }}",
+                  "item": "{{ shop.url }}{{ collection.url }}"
+                },{
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "{{ product.title | escape }}",
+                  "item": "{{ shop.url }}{{ product.url }}"
+                }
+              {%- else -%}
+                ,{
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "{{ product.title | escape }}",
+                  "item": "{{ shop.url }}{{ product.url }}"
+                }
+              {%- endif -%}
+            {%- elsif template.name == 'article' -%}
+              ,{
+                "@type": "ListItem",
+                "position": 2,
+                "name": "{{ blog.title | escape }}",
+                "item": "{{ shop.url }}{{ blog.url }}"
+              },{
+                "@type": "ListItem",
+                "position": 3,
+                "name": "{{ article.title | escape }}",
+                "item": "{{ shop.url }}{{ article.url }}"
+              }
+            {%- endif -%}
+          ]
+        }
+      </script>
+    {%- endif -%}
+
+    {%- if template.name == 'article' -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "{{ article.title | escape }}",
+          "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+          "dateModified": "{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+          "author": {
+            "@type": "Person",
+            "name": "Bull Sheath Leather"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Bull Sheath Leather",
+            "url": "https://bullsheathleather.com"
+          }
+        }
+      </script>
+    {%- endif -%}
+
+    {%- if template.name == 'collection' -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": [
+            {%- for product in collection.products -%}
+            {
+              "@type": "ListItem",
+              "position": {{ forloop.index }},
+              "url": "{{ shop.url }}{{ product.url }}"
+            }{%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ]
+        }
+      </script>
+    {%- endif -%}
+    {% include 'hulk_po_vd' %}
+    
     {{ content_for_header }}
 
     <style>

@@ -14,37 +14,37 @@
         "type": "color",
         "id": "color_background",
         "label": "t:settings_schema.colors.background",
-        "default": "#FFFFFF"
+        "default": "#0A0A0A"
       },
       {
         "type": "color",
         "id": "color_foreground",
         "label": "t:settings_schema.colors.foreground",
-        "default": "#000000"
+        "default": "#F5F5F5"
       },
       {
         "type": "color",
         "id": "color_primary",
         "label": "t:settings_schema.colors.primary",
-        "default": "#000000"
+        "default": "#141414"
       },
       {
         "type": "color",
         "id": "color_secondary",
         "label": "t:settings_schema.colors.secondary",
-        "default": "#333333"
+        "default": "#4B5320"
       },
       {
         "type": "color",
         "id": "color_accent",
         "label": "t:settings_schema.colors.accent",
-        "default": "#FF0000"
+        "default": "#B91C1C"
       },
       {
         "type": "color",
         "id": "color_border",
         "label": "t:settings_schema.colors.border",
-        "default": "#E0E0E0"
+        "default": "#262626"
       }
     ]
   },
@@ -55,13 +55,13 @@
         "type": "font_picker",
         "id": "type_header_font",
         "label": "t:settings_schema.typography.heading_font",
-        "default": "assistant_n7"
+        "default": "anton_n4"
       },
       {
         "type": "font_picker",
         "id": "type_body_font",
         "label": "t:settings_schema.typography.body_font",
-        "default": "assistant_n4"
+        "default": "inter_n4"
       }
     ]
   },
