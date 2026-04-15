@@ -28,11 +28,13 @@
             <p class="split-feature__content-text">{{ section.settings.content_text }}</p>
           {%- endif -%}
           <div class="split-feature__buttons">
-            {%- if section.settings.button_label != blank -%}
-              <a href="#" class="btn btn--secondary">
+            <a href="#" class="btn btn--secondary split-feature__scroll-top">
+              {%- if section.settings.button_label != blank -%}
                 {{ section.settings.button_label }}
-              </a>
-            {%- endif -%}
+              {%- else -%}
+                Reclaim Your Edge &rarr;
+              {%- endif -%}
+            </a>
             {%- if section.settings.button_label_2 != blank -%}
               <a href="{{ section.settings.button_url_2 }}" class="btn--link">
                 {{ section.settings.button_label_2 }}
@@ -164,6 +166,18 @@
     }
   }
 {% endstylesheet %}
+
+{% javascript %}
+  (function() {
+    document.querySelectorAll('.split-feature__scroll-top').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  })();
+{% endjavascript %}
+
 
 {% schema %}
 {
