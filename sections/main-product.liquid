@@ -2,7 +2,7 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
 <section class="main-product section-padding" {{ section.shopify_attributes }}>
-  <div class="container">
+  <div class="{% unless section.settings.full_width %}container{% endunless %}">
     <nav aria-label="breadcrumb" class="main-product__breadcrumb">
       <ol>
         <li><a href="{{ routes.root_url }}">{{ 'sections.main_product.home' | t }}</a></li>
@@ -297,6 +297,13 @@
   "name": "t:sections.main_product.name",
   "class": "section-main-product",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full-width",
+      "default": false,
+      "info": "When disabled, the section is constrained to 1920px max-width."
+    },
     {
       "type": "checkbox",
       "id": "show_vendor",
