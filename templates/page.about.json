@@ -3,29 +3,50 @@
     "hero": {
       "type": "page-hero",
       "settings": {
-        "tagline": "Our story",
-        "heading": "Built by athletes, for athletes",
-        "description": "We started Blackout because we were tired of underdosed, overhyped supplements hiding behind proprietary blends.",
+        "tagline": "The origin",
+        "heading": "Blackout was born from getting back up.",
+        "description": "Four spinal surgeries. A military career. A choice to come back through training instead of walking away from it. That's why Blackout exists.",
         "button_label": "Shop now",
-        "button_label_2": "Our process"
+        "button_label_2": "Our products"
       }
     },
     "mission": {
       "type": "split-feature",
       "settings": {
-        "content_tagline": "Mission",
-        "content_heading": "Transparency is our foundation",
-        "content_text": "Every ingredient is listed at its full dose. Every batch is third-party tested. Every label tells the complete truth. We believe athletes deserve to know exactly what they're putting in their bodies.",
-        "button_label": "View our products",
+        "content_tagline": "The real story",
+        "content_heading": "Built by someone who had to rebuild himself.",
+        "content_text": "The founder of Blackout Performance Labs served in the military. After his service, degenerative spinal stenosis led to four surgeries over five years. Most people at that point stop training. He didn't. He came back through disciplined, tactical fitness — and when he looked for supplements that matched that standard, he couldn't find them. Everything on the shelf was underdosed, overmarketed, or hiding its formula behind 'proprietary blends.' So he built Blackout. US-made. Full ingredient disclosure. Clinical doses. Built for people who take their training seriously — whether you're active duty, former military, law enforcement, or just someone coming back from something hard.",
+        "button_label": "Shop our products",
         "image_position": "2"
       }
     },
     "values": {
       "type": "trust-cards",
       "blocks": {
-        "v1": { "type": "card", "settings": { "tagline": "Transparent", "heading": "Full label disclosure", "text": "No hidden formulas. Complete ingredient breakdown on every product." } },
-        "v2": { "type": "card", "settings": { "tagline": "Tested", "heading": "Third-party certified", "text": "Independent labs verify potency and purity before you receive it." } },
-        "v3": { "type": "card", "settings": { "tagline": "Guaranteed", "heading": "Money-back promise", "text": "Sixty days to try it. If it doesn't work, we refund it." } }
+        "v1": {
+          "type": "card",
+          "settings": {
+            "tagline": "No excuses",
+            "heading": "US-made ingredients",
+            "text": "Sourced and manufactured in the United States. We won't cut corners on where your fuel comes from."
+          }
+        },
+        "v2": {
+          "type": "card",
+          "settings": {
+            "tagline": "No hiding",
+            "heading": "Full label disclosure",
+            "text": "Every ingredient listed at its full clinical dose. No proprietary blends. No underdosed formulas. Full transparency, always."
+          }
+        },
+        "v3": {
+          "type": "card",
+          "settings": {
+            "tagline": "No risk",
+            "heading": "60-day guarantee",
+            "text": "Try it for 60 days. If Blackout doesn't deliver, you get your money back. Full refund, no questions."
+          }
+        }
       },
       "block_order": ["v1", "v2", "v3"],
       "settings": {
@@ -36,14 +57,35 @@
     "stats": {
       "type": "stats-grid",
       "blocks": {
-        "s1": { "type": "stat", "settings": { "label": "Customer reviews", "value": "50,000+", "text": "Five-star ratings from athletes who tested our formulas" } },
+        "s1": {
+          "type": "stat",
+          "settings": {
+            "label": "Products in the lineup",
+            "value": "45",
+            "text": "From protein and creatine to joint support, sleep, and omega-3s — one stack for every mission"
+          }
+        },
         "s2": { "type": "image" },
-        "s3": { "type": "stat", "settings": { "label": "Products shipped", "value": "1M+", "text": "Units delivered worldwide" } },
-        "s4": { "type": "stat", "settings": { "label": "Lab tests passed", "value": "100%", "text": "Every batch third-party verified" } }
+        "s3": {
+          "type": "stat",
+          "settings": {
+            "label": "Proprietary blends",
+            "value": "Zero",
+            "text": "Every ingredient listed at its full dose on every label we make"
+          }
+        },
+        "s4": {
+          "type": "stat",
+          "settings": {
+            "label": "Guarantee",
+            "value": "60 days",
+            "text": "Risk-free trial on every product we sell — no questions asked"
+          }
+        }
       },
       "block_order": ["s1", "s2", "s3", "s4"],
       "settings": {
-        "heading": "Our impact in numbers",
+        "heading": "The Blackout standard",
         "columns": 3
       }
     },
@@ -58,26 +100,58 @@
         "l6": { "type": "logo" }
       },
       "block_order": ["l1", "l2", "l3", "l4", "l5", "l6"],
-      "settings": { "heading": "Featured in" }
+      "settings": { "heading": "As seen in" }
     },
     "testimonials": {
       "type": "testimonial-carousel",
       "blocks": {
-        "r1": { "type": "testimonial" },
-        "r2": { "type": "testimonial" },
-        "r3": { "type": "testimonial" },
-        "r4": { "type": "testimonial" }
+        "r1": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"I've been through two knee surgeries. Finding a brand that actually cares about recovery and not just pre-workout hype is rare. Blackout gets it.\"",
+            "name": "James R.",
+            "title": "Marine veteran, tactical athlete"
+          }
+        },
+        "r2": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"This brand was clearly built by someone who trains for real. Not some fitness influencer — someone who knows what it costs to keep going when it's hard.\"",
+            "name": "Sarah K.",
+            "title": "Active duty Army, Iron Man competitor"
+          }
+        },
+        "r3": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"I appreciate that the person who built this actually lived it. It shows in the products. No fluff, no hype — just what you need to keep training.\"",
+            "name": "Marcus T.",
+            "title": "Army veteran, strength coach"
+          }
+        },
+        "r4": {
+          "type": "testimonial",
+          "settings": {
+            "rating": 5,
+            "quote": "\"The story behind Blackout is exactly why I trust the products. This wasn't built by a marketing team. It was built by someone who had a real reason to build it.\"",
+            "name": "David P.",
+            "title": "Firefighter, competitive lifter"
+          }
+        }
       },
       "block_order": ["r1", "r2", "r3", "r4"],
-      "settings": { "heading": "What athletes say" }
+      "settings": { "heading": "Who trains with Blackout" }
     },
     "cta": {
       "type": "cta-banner",
       "settings": {
-        "heading": "Ready to try Blackout?",
-        "description": "Clean ingredients. Clinical doses. Transparent labels.",
+        "heading": "Train like your life depends on it.",
+        "description": "US-made supplements built for people who don't quit. Find your stack and get to work.",
         "button_label": "Shop now",
-        "button_label_2": "Take the quiz"
+        "button_label_2": "Find your stack"
       }
     }
   },

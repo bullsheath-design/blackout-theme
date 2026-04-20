@@ -6,38 +6,38 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "heading": "Fuel your performance",
-            "subheading": "Clean ingredients. Clinical doses. Transparent labels. Supplements built for athletes who demand results.",
+            "heading": "Train like your life depends on it.",
+            "subheading": "Supplements built for tactical athletes, military, and law enforcement. Clinical doses. Full ingredient disclosure. Zero filler.",
             "tab_label": "Performance",
             "button_label": "Shop now",
-            "button_label_2": "Take the quiz"
+            "button_label_2": "Find your stack"
           }
         },
         "slide_2": {
           "type": "slide",
           "settings": {
-            "heading": "No proprietary blends",
-            "subheading": "Every ingredient listed at its full dose. You know exactly what you're putting in your body.",
-            "tab_label": "Transparent",
-            "button_label": "View ingredients",
-            "button_label_2": "Learn more"
+            "heading": "300 Blackout. Built for the ones who never tap out.",
+            "subheading": "Named after the round that does the job without the noise. Our supplements do the same — effective, precise, no unnecessary ingredients.",
+            "tab_label": "Our mission",
+            "button_label": "Shop now",
+            "button_label_2": "Our story"
           }
         },
         "slide_3": {
           "type": "slide",
           "settings": {
-            "heading": "Third-party tested",
-            "subheading": "Independent labs verify every batch for potency and purity before it ships to you.",
-            "tab_label": "Tested",
-            "button_label": "See results",
-            "button_label_2": "Our process"
+            "heading": "US-made. Clinical doses. No fluff.",
+            "subheading": "Every ingredient listed at its full dose. No proprietary blends hiding underdosed formulas. You know exactly what you're putting in your body.",
+            "tab_label": "Transparent",
+            "button_label": "View products",
+            "button_label_2": "Learn more"
           }
         },
         "slide_4": {
           "type": "slide",
           "settings": {
-            "heading": "60-day guarantee",
-            "subheading": "Try it risk-free. If it doesn't deliver, get your money back. No questions asked.",
+            "heading": "Try it risk-free for 60 days.",
+            "subheading": "If Blackout doesn't perform, get your money back. No questions, no hassle. We stand behind every product we make.",
             "tab_label": "Guarantee",
             "button_label": "Shop now",
             "button_label_2": "Learn more"
@@ -61,32 +61,32 @@
       },
       "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
       "settings": {
-        "heading": "Featured in"
+        "heading": "As seen in"
       }
     },
     "products": {
       "type": "featured-collection",
       "settings": {
-        "tagline": "Products",
-        "heading": "Shop our best sellers",
-        "description": "Formulated for athletes who demand transparency and results.",
+        "tagline": "Fuel up",
+        "heading": "Built for your mission",
+        "description": "Whether you're building strength, cutting fat, or grinding through endurance training — there's a stack for that.",
         "products_to_show": 4,
         "columns": 4,
         "show_vendor": true,
         "show_button": true,
-        "view_all_label": "View all"
+        "view_all_label": "Shop all products"
       }
     },
     "split": {
       "type": "split-feature",
       "settings": {
-        "tagline": "Our mission",
-        "heading": "Built different",
-        "content_tagline": "Performance",
-        "content_heading": "Supplements that actually work",
-        "content_text": "We started Blackout because we were tired of underdosed, overhyped supplements. Every product is formulated with clinically researched doses and zero filler.",
-        "button_label": "Our story",
-        "button_label_2": "Learn more",
+        "tagline": "Why Blackout",
+        "heading": "Born in recovery. Built for performance.",
+        "content_tagline": "The mission",
+        "content_heading": "Four surgeries. One direction.",
+        "content_text": "Blackout was built by someone who knows what it means to fight to get back. After four spinal surgeries and a military career, the founder came back through training. He couldn't find a supplement brand that matched his standards — so he built one. US-made, clinically dosed, full disclosure on every label.",
+        "button_label": "Read the full story",
+        "button_label_2": "Shop now",
         "image_position": "2"
       }
     },
@@ -96,43 +96,43 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "tagline": "Transparent",
-            "heading": "Full label disclosure",
-            "text": "No hidden formulas. Complete ingredient breakdown on every product.",
-            "button_label": "View"
+            "tagline": "Made in the USA",
+            "heading": "US-made ingredients",
+            "text": "Every product sourced and manufactured in the United States. No overseas fillers, no quality shortcuts.",
+            "button_label": "Learn more"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "tagline": "Tested",
-            "heading": "Third-party certified",
-            "text": "Independent labs verify potency and purity before you receive it.",
-            "button_label": "View"
+            "tagline": "No hiding",
+            "heading": "Full label disclosure",
+            "text": "Every ingredient at its full clinical dose. No proprietary blends. No underdosed formulas hiding behind a label.",
+            "button_label": "Learn more"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
-            "tagline": "Guaranteed",
-            "heading": "Money-back promise",
-            "text": "Sixty days to try it. If it doesn't work, we refund it.",
-            "button_label": "View"
+            "tagline": "Risk-free",
+            "heading": "60-day money-back",
+            "text": "If it doesn't deliver, you don't pay. Try Blackout for 60 days and get a full refund if you're not satisfied.",
+            "button_label": "Learn more"
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
-            "tagline": "Clean",
-            "heading": "No artificial fillers",
-            "text": "Every ingredient serves a purpose. Nothing unnecessary.",
-            "button_label": "View"
+            "tagline": "Purpose-built",
+            "heading": "Nothing without a reason",
+            "text": "Every ingredient earns its place. No fillers, no fluff — just what your body needs to perform.",
+            "button_label": "Learn more"
           }
         }
       },
       "block_order": ["card_1", "card_2", "card_3", "card_4"],
       "settings": {
-        "heading": "Why choose Blackout",
+        "heading": "Why Blackout Performance Labs",
         "columns": 4
       }
     },
@@ -143,43 +143,43 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"I've tested everything. Blackout is the only brand that delivers exactly what the label says.\"",
-            "name": "Marcus Chen",
-            "title": "Competitive powerlifter"
+            "quote": "\"I spent 8 years in the Army and I've used a lot of supplements. Blackout is the first brand that actually tells you what's in it at the dose that matters.\"",
+            "name": "Marcus T.",
+            "title": "Army veteran, strength coach"
           }
         },
         "review_2": {
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"Finally a supplement company that doesn't hide behind proprietary blends. Real doses, real results.\"",
-            "name": "Sarah Thompson",
-            "title": "CrossFit athlete"
+            "quote": "\"Training for a marathon while working a 12-hour law enforcement shift is brutal. PRE-IGNITION gets me through morning PT without the jitter crash. Game changer.\"",
+            "name": "Sarah K.",
+            "title": "Law enforcement, marathon runner"
           }
         },
         "review_3": {
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"The pre-workout hits different when you know every ingredient is clinically dosed. Night and day difference.\"",
-            "name": "James Rodriguez",
-            "title": "Personal trainer"
+            "quote": "\"After my knee surgery I needed something real to support recovery. JOINT ARMOR and RECOVERY OPS have me back on the ruck.\"",
+            "name": "James R.",
+            "title": "Marine veteran, tactical athlete"
           }
         },
         "review_4": {
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"Third-party tested and it shows. Clean energy, no crash, no jitters. This is what supplements should be.\"",
-            "name": "Alex Kim",
-            "title": "Marathon runner"
+            "quote": "\"No fancy packaging, no BS marketing. Just a straightforward label with what's actually in it. That's all I've ever wanted from a supplement company.\"",
+            "name": "Alex M.",
+            "title": "CrossFit competitor"
           }
         }
       },
       "block_order": ["review_1", "review_2", "review_3", "review_4"],
       "settings": {
-        "heading": "Customer testimonials",
-        "description": "See what athletes are saying about Blackout supplements."
+        "heading": "What our community is saying",
+        "description": "Tactical athletes, veterans, and fighters who demand results from their supplements."
       }
     },
     "testimonials_grid": {
@@ -189,54 +189,54 @@
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"The transparency alone sets them apart. I can see exactly what I'm taking and match it against the research myself.\"",
-            "name": "David Park",
-            "title": "Strength coach"
+            "quote": "\"Finally a brand that treats me like I can read an ingredient label. Full doses, real ingredients, honest price.\"",
+            "name": "David P.",
+            "title": "Firefighter, competitive lifter"
           }
         },
         "review_2": {
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"Switched from my old brand and the difference was immediate. Blackout doesn't cut corners.\"",
-            "name": "Michelle Torres",
-            "title": "Fitness competitor"
+            "quote": "\"Switched from two big-name brands and I'm not going back. The difference in energy and recovery is not subtle.\"",
+            "name": "Michelle T.",
+            "title": "Active duty Army, Iron Man competitor"
           }
         },
         "review_3": {
           "type": "testimonial",
           "settings": {
             "rating": 5,
-            "quote": "\"I recommend Blackout to every client. Clean, effective, and you know exactly what you're getting.\"",
-            "name": "Ryan Mitchell",
-            "title": "Sports nutritionist"
+            "quote": "\"I've come back from two surgeries. Blackout RECOVERY OPS and JOINT ARMOR are a serious part of my rehab stack.\"",
+            "name": "Ryan W.",
+            "title": "Law enforcement, injury recovery"
           }
         }
       },
       "block_order": ["review_1", "review_2", "review_3"],
       "settings": {
-        "heading": "Customer testimonials",
+        "heading": "Real results from real athletes",
         "columns": 3
       }
     },
     "cta_split": {
       "type": "split-feature",
       "settings": {
-        "tagline": "Community",
-        "content_heading": "Join the Blackout community",
-        "content_text": "Connect with athletes, get exclusive content, and be the first to know about new product drops.",
-        "button_label": "Join now",
-        "button_label_2": "Learn more",
+        "tagline": "Subscription",
+        "content_heading": "Lock in your stack and save.",
+        "content_text": "Subscribe and save on your monthly supply. Never run out. No contract, cancel any time. Stacking multiple products? Bundle pricing drops the cost even further.",
+        "button_label": "Shop subscriptions",
+        "button_label_2": "Build a bundle",
         "image_position": "1"
       }
     },
     "cta": {
       "type": "cta-banner",
       "settings": {
-        "heading": "Ready to elevate your performance?",
-        "description": "Clean ingredients. Clinical doses. Transparent labels. Start your transformation today.",
+        "heading": "Ready to train without excuses?",
+        "description": "US-made supplements built for people who don't cut corners. Start your stack today.",
         "button_label": "Shop now",
-        "button_label_2": "Take the quiz"
+        "button_label_2": "Find your stack"
       }
     },
     "features": {
@@ -245,45 +245,45 @@
         "feature_1": {
           "type": "feature",
           "settings": {
-            "trigger_title": "Clean formula",
-            "tagline": "Ingredients",
-            "heading": "No proprietary blends or filler",
-            "text": "Every ingredient is listed at its full dose. No hiding behind \"proprietary blend\" language. You know exactly what you're taking and why.",
-            "button_label": "View ingredients",
+            "trigger_title": "US-made",
+            "tagline": "Sourced and made in the USA",
+            "heading": "No overseas shortcuts",
+            "text": "Every product in the Blackout lineup is sourced and manufactured in the United States. We won't compromise where your fuel comes from.",
+            "button_label": "Shop now",
             "button_label_2": "Learn more"
           }
         },
         "feature_2": {
           "type": "feature",
           "settings": {
-            "trigger_title": "Clinically dosed",
-            "tagline": "Science",
-            "heading": "Doses that match the research",
-            "text": "Every ingredient at its researched effective dose. No pixie-dusting. No underdosing. Just what the science says works.",
-            "button_label": "View research",
+            "trigger_title": "Clinical doses",
+            "tagline": "Science-backed formulas",
+            "heading": "Doses that do the job",
+            "text": "Every ingredient is at the dose the research supports. No pixie-dusting. No hiding underdosed ingredients inside a 'proprietary blend.' You get what the label says.",
+            "button_label": "View products",
             "button_label_2": "Learn more"
           }
         },
         "feature_3": {
           "type": "feature",
           "settings": {
-            "trigger_title": "Third-party tested",
-            "tagline": "Quality",
-            "heading": "Independent lab verification",
-            "text": "Every batch is sent to an independent lab for potency and purity testing. We publish the results so you never have to guess.",
-            "button_label": "View certificates",
+            "trigger_title": "Full disclosure",
+            "tagline": "Transparent labeling",
+            "heading": "Nothing hidden, nothing extra",
+            "text": "Every ingredient is listed. Every dose is shown. We don't believe in hiding behind blends. If it's in there, you can see it. If it doesn't serve a purpose, it's not in there.",
+            "button_label": "View labels",
             "button_label_2": "Learn more"
           }
         },
         "feature_4": {
           "type": "feature",
           "settings": {
-            "trigger_title": "Money-back guarantee",
-            "tagline": "Trust",
-            "heading": "60-day no-questions refund",
-            "text": "We stand behind every product. Try it for 60 days. If you don't see results, we'll give you a full refund. No questions asked.",
-            "button_label": "Our guarantee",
-            "button_label_2": "Learn more"
+            "trigger_title": "60-day guarantee",
+            "tagline": "Risk-free",
+            "heading": "Try it. If it doesn't deliver, we refund it.",
+            "text": "We stand behind every product we make. Order Blackout, use it for 60 days. If you don't see what you came for, we'll refund you in full. No hoops, no questions.",
+            "button_label": "Shop now",
+            "button_label_2": "Our guarantee"
           }
         }
       },
