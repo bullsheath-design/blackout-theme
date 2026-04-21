@@ -1,6 +1,36 @@
 {%- assign product = product -%}
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ ecommerce: null });
+  window.dataLayer.push({
+    event: 'view_item',
+    ecommerce: {
+      currency: '{{ cart.currency.iso_code }}',
+      value: {{ current_variant.price | divided_by: 100.0 }},
+      items: [{
+        item_id: '{{ current_variant.sku | escape }}',
+        item_name: '{{ product.title | escape }}',
+        item_brand: '{{ product.vendor | escape }}',
+        item_category: '{{ product.type | escape }}',
+        item_variant: '{{ current_variant.title | escape }}',
+        price: {{ current_variant.price | divided_by: 100.0 }},
+        quantity: 1
+      }]
+    }
+  });
+  window.__bpl_product = {
+    sku: '{{ current_variant.sku | escape }}',
+    name: '{{ product.title | escape }}',
+    brand: '{{ product.vendor | escape }}',
+    category: '{{ product.type | escape }}',
+    variant: '{{ current_variant.title | escape }}',
+    price: {{ current_variant.price | divided_by: 100.0 }},
+    currency: '{{ cart.currency.iso_code }}'
+  };
+</script>
+
 <section class="main-product section-padding" {{ section.shopify_attributes }}>
   <div class="{% unless section.settings.full_width %}container{% endunless %}">
     <nav aria-label="breadcrumb" class="main-product__breadcrumb">
@@ -265,9 +295,18 @@
   }
 
   @media (min-width: 1024px) {
+    .main-product .container {
+      max-width: 1536px;
+      margin: 0 auto;
+    }
+
     .main-product__grid {
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.3fr 1fr;
       gap: 5rem;
+    }
+
+    .main-product__info {
+      padding: 0 40px;
     }
   }
 {% endstylesheet %}
@@ -289,6 +328,33 @@
         this.classList.add('main-product__thumb--active');
       });
     });
+
+    var form = section.querySelector('.main-product__form');
+    if (form) {
+      form.addEventListener('submit', function() {
+        var productData = window.__bpl_product;
+        if (!productData) return;
+        var qty = parseInt((section.querySelector('[name="quantity"]') || {}).value) || 1;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ ecommerce: null });
+        window.dataLayer.push({
+          event: 'add_to_cart',
+          ecommerce: {
+            currency: productData.currency,
+            value: productData.price * qty,
+            items: [{
+              item_id: productData.sku,
+              item_name: productData.name,
+              item_brand: productData.brand,
+              item_category: productData.category,
+              item_variant: productData.variant,
+              price: productData.price,
+              quantity: qty
+            }]
+          }
+        });
+      });
+    }
   })();
 {% endjavascript %}
 

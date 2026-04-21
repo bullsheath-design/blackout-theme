@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K6XNXCFW');</script>
+    <!-- End Google Tag Manager -->
     {% if settings.show_canonical_url_collection and template.name == "collection" %}
       <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
     {% else %}
@@ -38,31 +45,19 @@
             {
               "@type": "Organization",
               "@id": "{{ shop.url }}/#organization",
-              "name": "Bull Sheath Leather",
+              "name": "{{ shop.name }}",
               "url": "{{ shop.url }}",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://bullsheathleather.com/cdn/shop/files/Bull_Sheath_Leather_Logo.png?v=1770328797&width=793"
-              },
-              "image": "https://bullsheathleather.com/cdn/shop/files/Bull_Sheath_Leather_Logo.png?v=1770328797&width=793",
-              "description": "Family-owned Texas leather goods company specializing in handcrafted full-grain leather wallets, badge wallets, knife sheaths, belts, and accessories.",
-              "telephone": "(817) 239-2540",
-              "email": "contact@bullsheathleather.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "1301 East Debbie Lane, Ste. 102 #1418",
-                "addressLocality": "Mansfield",
-                "addressRegion": "TX",
-                "postalCode": "76063",
-                "addressCountry": "US"
-              },
+              {%- if settings.social_instagram != blank or settings.social_facebook != blank or settings.social_youtube != blank or settings.social_tiktok != blank -%}
               "sameAs": [
-                "https://www.wikidata.org/wiki/Q139235402",
-                "https://www.facebook.com/bullsheathleather/",
-                "https://www.instagram.com/bullsheathleather/",
-                "https://www.youtube.com/channel/UCDsWXii6bALqW_CaKbFssYg"
+                {%- assign sameAs_items = '' -%}
+                {%- if settings.social_instagram != blank -%}{%- assign sameAs_items = sameAs_items | append: '"' | append: settings.social_instagram | append: '",' -%}{%- endif -%}
+                {%- if settings.social_facebook != blank -%}{%- assign sameAs_items = sameAs_items | append: '"' | append: settings.social_facebook | append: '",' -%}{%- endif -%}
+                {%- if settings.social_youtube != blank -%}{%- assign sameAs_items = sameAs_items | append: '"' | append: settings.social_youtube | append: '",' -%}{%- endif -%}
+                {%- if settings.social_tiktok != blank -%}{%- assign sameAs_items = sameAs_items | append: '"' | append: settings.social_tiktok | append: '",' -%}{%- endif -%}
+                {{ sameAs_items | remove_last: ',' }}
               ],
-              "foundingDate": "2020"
+              {%- endif -%}
+              "description": "{{ shop.name }} — premium performance supplements engineered for athletes who demand more."
             },
             {
               "@type": "WebSite",
@@ -82,19 +77,6 @@
               }
             }
           ]
-        }
-      </script>
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Bull Sheath Leather",
-          "address": {
-            "@type": "PostalAddress",
-            "addressRegion": "Texas"
-          },
-          "url": "https://bullsheathleather.com",
-          "additionalType": "LeatherGoodsStore"
         }
       </script>
     {%- endif -%}
@@ -166,13 +148,13 @@
           "datePublished": "{{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
           "dateModified": "{{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' }}",
           "author": {
-            "@type": "Person",
-            "name": "Bull Sheath Leather"
+            "@type": "Organization",
+            "name": "{{ shop.name }}"
           },
           "publisher": {
             "@type": "Organization",
-            "name": "Bull Sheath Leather",
-            "url": "https://bullsheathleather.com"
+            "name": "{{ shop.name }}",
+            "url": "{{ shop.url }}"
           }
         }
       </script>
@@ -258,8 +240,15 @@
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 45px;
-        padding-right: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          padding-left: 45px;
+          padding-right: 45px;
+        }
       }
 
       .section-padding {
@@ -352,6 +341,10 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6XNXCFW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a class="visually-hidden" href="#main-content">
       {{ 'general.accessibility.skip_to_content' | t }}
     </a>
@@ -363,5 +356,17 @@
     </main>
 
     {% sections 'footer-group' %}
+
+    <script>
+      (function() {
+        document.addEventListener('click', function(e) {
+          var el = e.target.closest('a[href*="/checkout"], button[name="checkout"], input[name="checkout"]');
+          if (!el) return;
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ ecommerce: null });
+          window.dataLayer.push({ event: 'begin_checkout' });
+        });
+      })();
+    </script>
   </body>
 </html>
