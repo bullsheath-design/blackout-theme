@@ -21,7 +21,7 @@
             <a href="{{ product.url }}" class="product-card__link">
               <div class="product-card__media">
                 {%- if product.featured_image != blank -%}
-                  {{ product.featured_image | image_url: width: 600, height: 600, crop: 'center' | image_tag: alt: product.title, loading: 'lazy', class: 'product-card__image' }}
+                  {{ product.featured_image | image_url: width: 600, height: 600, crop: 'center', format: 'webp' | image_tag: alt: product.title, loading: 'lazy', class: 'product-card__image' }}
                 {%- else -%}
                   {{ 'product-1' | placeholder_svg_tag: 'product-card__image product-card__placeholder' }}
                 {%- endif -%}

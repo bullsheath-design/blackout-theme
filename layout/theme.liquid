@@ -12,7 +12,9 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5GJD6226');</script>
     <!-- End Google Tag Manager -->
-    {% if settings.show_canonical_url_collection and template.name == "collection" %}
+    {% if template.name == "product" %}
+      <link rel="canonical" href="{{ shop.url }}{{ product.url }}">
+    {% elsif template.name == "collection" %}
       <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
     {% else %}
       <link rel="canonical" href="{{ canonical_url }}">
@@ -35,6 +37,10 @@
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% if current_tags %}
+      <meta name="robots" content="noindex, follow">
     {% endif %}
 
     {%- if template.name == 'index' -%}

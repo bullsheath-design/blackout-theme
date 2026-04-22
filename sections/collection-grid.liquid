@@ -64,7 +64,7 @@
             <div class="collection-grid__item">
               <a href="{{ product.url }}" class="collection-grid__image-link">
                 {%- if product.featured_image != blank -%}
-                  {{ product.featured_image | image_url: width: 600, height: 720, crop: 'center' | image_tag: alt: product.title, loading: 'lazy', class: 'collection-grid__image' }}
+                  {{ product.featured_image | image_url: width: 600, height: 720, crop: 'center', format: 'webp' | image_tag: alt: product.title, loading: 'lazy', class: 'collection-grid__image' }}
                 {%- else -%}
                   {{ 'product-1' | placeholder_svg_tag: 'collection-grid__image collection-grid__placeholder' }}
                 {%- endif -%}

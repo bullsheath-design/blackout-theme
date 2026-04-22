@@ -54,7 +54,11 @@
         {%- for media in product.media -%}
           <div class="main-product__media-item{% if forloop.first %} main-product__media-item--active{% endif %}">
             {%- if media.media_type == 'image' -%}
-              {{ media | image_url: width: 1200 | image_tag: alt: media.alt, loading: 'lazy', class: 'main-product__image' }}
+              {%- if forloop.first -%}
+                {{ media | image_url: width: 1200, format: 'webp' | image_tag: alt: media.alt, loading: 'eager', fetchpriority: 'high', class: 'main-product__image' }}
+              {%- else -%}
+                {{ media | image_url: width: 1200, format: 'webp' | image_tag: alt: media.alt, loading: 'lazy', class: 'main-product__image' }}
+              {%- endif -%}
             {%- elsif media.media_type == 'video' -%}
               {{ media | video_tag: controls: true, class: 'main-product__video' }}
             {%- elsif media.media_type == 'external_video' -%}
@@ -72,7 +76,7 @@
             {%- for media in product.media -%}
               {%- if media.media_type == 'image' -%}
                 <button class="main-product__thumb{% if forloop.first %} main-product__thumb--active{% endif %}" data-media-index="{{ forloop.index0 }}">
-                  {{ media | image_url: width: 100, height: 100, crop: 'center' | image_tag: alt: media.alt, loading: 'lazy' }}
+                  {{ media | image_url: width: 100, height: 100, crop: 'center', format: 'webp' | image_tag: alt: media.alt, loading: 'lazy' }}
                 </button>
               {%- endif -%}
             {%- endfor -%}
