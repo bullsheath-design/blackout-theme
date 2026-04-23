@@ -13,7 +13,7 @@
     })(window,document,'script','dataLayer','GTM-5GJD6226');</script>
     <!-- End Google Tag Manager -->
     {% if template.name == "product" %}
-      <link rel="canonical" href="{{ shop.url }}{{ product.url }}">
+      <link rel="canonical" href="{{ shop.url }}/products/{{ product.handle }}">
     {% elsif template.name == "collection" %}
       <link rel="canonical" href="{{ canonical_url | split: '?' | first }}">
     {% else %}
@@ -39,7 +39,7 @@
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    {% if current_tags %}
+    {% if template.name == 'blog' and current_tags %}
       <meta name="robots" content="noindex, follow">
     {% endif %}
 
